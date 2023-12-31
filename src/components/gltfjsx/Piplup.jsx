@@ -8,7 +8,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 export function Piplup({ hovered, ...props }) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/models/Piplup.glb");
+  const { nodes, materials, animations } = useGLTF("../../public/models/Piplup.glb");
   const { actions } = useAnimations(animations, group);
   useEffect(() => {
     console.log("企鹅", actions);
@@ -33,4 +33,4 @@ export function Piplup({ hovered, ...props }) {
   );
 }
 
-useGLTF.preload("/models/Piplup.glb");
+useGLTF.preload("../../public/models/Piplup.glb");

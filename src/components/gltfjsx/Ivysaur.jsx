@@ -8,7 +8,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 export function Ivysaur({ hovered, ...props }) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/models/Ivysaur.glb");
+  const { nodes, materials, animations } = useGLTF("../../public/models/Ivysaur.glb");
   const { actions } = useAnimations(animations, group);
   useEffect(() => {
     console.log("妙蛙", actions);
@@ -53,4 +53,4 @@ export function Ivysaur({ hovered, ...props }) {
   );
 }
 
-useGLTF.preload("/models/Ivysaur.glb");
+useGLTF.preload("../../public/models/Ivysaur.glb");

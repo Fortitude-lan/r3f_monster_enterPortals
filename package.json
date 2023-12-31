@@ -1,12 +1,9 @@
 {
-  "homepage":"https://Fortitude-lan.github.io/r3f_monster_enterPortals/",
   "name": "r3f-vite-starter",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"

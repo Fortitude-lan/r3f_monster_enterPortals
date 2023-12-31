@@ -18,7 +18,7 @@ import * as THREE from "three";
 import { extend, useFrame, useLoader } from "@react-three/fiber";
 export function Charizard({ hovered, ...props }) {
   const { nodes, materials, animations } = useGLTF(
-    "/models/Charizard.glb"
+    "../../public/models/Charizard.glb"
   );
   const group = useRef();
   const { actions } = useAnimations(animations, group);
@@ -27,8 +27,8 @@ export function Charizard({ hovered, ...props }) {
   const cRef = useRef();
   const cGeoRef = useRef();
 
-  const alphaMapTextureS = useTexture("/textures/pm0006_00_FireStenA1.png");
-  const alphaMapTextureC = useTexture("/textures/pm0006_00_FireCoreA1.png");
+  const alphaMapTextureS = useTexture("../../public/textures/pm0006_00_FireStenA1.png");
+  const alphaMapTextureC = useTexture("../../public/textures/pm0006_00_FireCoreA1.png");
 
   useFrame((state, delta) => {
     if (sRef.current) {
@@ -127,7 +127,7 @@ export function Charizard({ hovered, ...props }) {
   );
 }
 
-useGLTF.preload("/models/Charizard.glb");
+useGLTF.preload("../../public/models/Charizard.glb");
 
 export const TailSMaterial = shaderMaterial(
   {

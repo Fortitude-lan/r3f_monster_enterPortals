@@ -46,7 +46,7 @@ export const Experience = () => {
   return (
     <>
       <ambientLight intensity={1} />
-      <Environment preset={null} files={"/textures/venice_sunset_1k.hdr"} />
+      <Environment preset={null} files={"../../public/textures/venice_sunset_1k.hdr"} />
       <CameraControls
         ref={controlsRef}
         maxPolarAngle={Math.PI / 2}
@@ -55,7 +55,7 @@ export const Experience = () => {
       <MonsterStage
         color={"#e08d47"}
         name={names.Charizard}
-        texture={"/textures/lava_pokemo_world.jpg"}
+        texture={"../../public/textures/lava_pokemo_world.jpg"}
         active={active}
         setactive={setactive}
         hovered={hovered}
@@ -71,7 +71,7 @@ export const Experience = () => {
       <MonsterStage
         color={"#77a17a"}
         name={names.Ivysaur}
-        texture={"/textures/cactus_pokemo_forest.jpg"}
+        texture={"../../public/textures/cactus_pokemo_forest.jpg"}
         position-x={-2.5}
         rotation-y={Math.PI / 8}
         active={active}
@@ -88,7 +88,7 @@ export const Experience = () => {
       <MonsterStage
         color={"#0066ab"}
         name={names.Piplup}
-        texture={"/textures/water_pokemon_environ.jpg"}
+        texture={"../../public/textures/water_pokemon_environ.jpg"}
         position-x={2.5}
         rotation-y={-Math.PI / 8}
         active={active}
@@ -126,7 +126,7 @@ export const MonsterStage = ({
   return (
     <group {...props}>
       <Text
-        font="/fonts/RubikBubbles-Regular.ttf"
+        font="../../public/fonts/RubikBubbles-Regular.ttf"
         fontSize={0.25}
         // color="salmon"
         position={[0, -1.4, 0.051]}
@@ -151,7 +151,7 @@ export const MonsterStage = ({
           <ambientLight intencity={1} />
           <Environment
             preset={null}
-            files={"/textures/venice_sunset_1k.hdr"}
+            files={"../../public/textures/venice_sunset_1k.hdr"}
             onPointerEnter={() => {}}
             onPointerLeave={() => {}}
           />
